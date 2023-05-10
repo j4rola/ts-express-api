@@ -9,7 +9,7 @@ const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.get('/', (req, res) => {
-    res.send((0, stringService_1.logger)());
+    res.send((0, stringService_1.getCustomString)('My Custom String'));
 });
 app.get('/test', (req, res) => {
     res.send('test');

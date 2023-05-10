@@ -1,3 +1,3 @@
-export const logger = (): string => {
-    return 'string' 
+export const getCustomString = (x: string): string => {
+    return x
 } 

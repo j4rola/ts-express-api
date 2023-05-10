@@ -1,5 +1,5 @@
 import express from 'express';
-import { logger } from './services/stringService';
+import { getCustomString } from './services/stringService';
 import cors from 'cors'; 
 
 
@@ -8,7 +8,7 @@ const app = express();
 app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send(logger());
+  res.send(getCustomString('My Custom String'));
 });
 
 app.get('/test', (req, res) => { 
